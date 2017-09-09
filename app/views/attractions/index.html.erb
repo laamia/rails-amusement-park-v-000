@@ -1,0 +1,10 @@
+<% if !@user.admin %>
+  <% Attraction.all.each do |attraction|%>
+  <%= link_to("Go on #{attraction.name}", "/attractions/#{attraction.id}")%>
+  <% end %>
+<% end %>
+<%= link_to("New Attraction", "/attractions/new")%>
+
+<% Attraction.all.each do |attraction|%>
+<%= link_to("Show #{attraction.name}", "/attractions/#{attraction.id}")%>
+<% end %>

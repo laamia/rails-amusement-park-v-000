@@ -1,0 +1,12 @@
+<%= @user.name %></br>
+<div>ADMIN</div>
+<p>Mood: <%=@user.mood%></p></br>
+<p>Tickets: <%=@user.tickets%></p></br>
+<p>Height: <%=@user.height%></p></br>
+<% if @results != true%>
+  <p><%= @results %></p>
+<% else %>
+  <p>Thanks for riding the <%=@attraction.name%>!</p>
+<% end %>
+<%= link_to("See attractions", "/attractions") %>
+<%= link_to("Log Out", "/logout") %>

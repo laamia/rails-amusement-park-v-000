@@ -1,0 +1,11 @@
+<p><%= @attraction.name %></p>
+
+<% if !@user.admin %>
+  <%= form_tag(user_path(@user), method: "GET") do %>
+    <%= submit_tag "Go on this ride" %>
+  <% end %>
+<% end %>
+
+<% if @user.admin %>
+  <%= link_to("Edit Attraction", "/attractions/#{@attraction.id}/edit") %>
+<% end %>
